@@ -8,7 +8,8 @@ WORKDIR /TrioTask/db
 ENV MYSQL_DATABASE=flask-db
 ENV MYSQL_ROOT_PASSWORD=pleaseworkthankyou
 # Add the content of the .sql file to your image
-COPY .docker-entrypoint-initdb.d/RUN pwd && ls -la
+COPY . docker-entrypoint-initdb.d/
+
 
 
 # All scripts copied to docker-entrypoint-initdb.d/ are automatically
