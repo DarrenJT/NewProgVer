@@ -3,21 +3,21 @@ services:
   flask-app:
     build: ./flask-app
   depends_on:
-  - "database"
+    - "database"
   database:
     image: mysql:latest
     container_name: flask-db
   ports:
-  - target: 5000
-    published: 5000
+    - target: 5000
+      published: 5000
   protocol: tcp
 nginx:
-    image: nginx:latest
-    ports:
+  image: nginx:latest
+  ports:
     - target: 80
       published: 80
-    protocol: tcp
+  protocol: tcp
 volumes:
-    - type: bind
-      source: ./nginx/nginx.conf
+  - type: bind
+    source: ./nginx/nginx.conf
 target: /etc/nginx/nginx.conf
