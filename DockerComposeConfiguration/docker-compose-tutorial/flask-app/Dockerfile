@@ -1,5 +1,5 @@
-FROM python:3.6
+FROM python:3.6.8
 COPY . .
-RUN pip install flask
+RUN pip3 install flask
 EXPOSE 5000
-ENTRYPOINT ["python", "app.py"]
+ENTRYPOINT ["python3", "app.py"]
