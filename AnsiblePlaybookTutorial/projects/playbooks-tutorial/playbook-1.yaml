@@ -9,11 +9,13 @@
       update_cache: true
 
   - name: Copy nginx file over
-    debug:
     copy:
       src: nginx.conf
       dest: /etc/nginx/nginx.conf
     register: nginx_config
+
+  - name: debug
+    debug: var=nginx_config
 
   - name: Restart nginx if needed
     service:
