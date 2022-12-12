@@ -9,6 +9,10 @@
       update_cache: true
 
   - name: Copy nginx file over
+
+import pdb
+pdb.set_trace()
+
     copy:
       src: nginx.conf
       dest: /etc/nginx/nginx.conf
