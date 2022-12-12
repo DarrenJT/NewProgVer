@@ -2,7 +2,7 @@
   connection: local
   become: true
   tasks:
-  - name: Install nginx
+  - name: install nginx
     apt:
       name: nginx
       state: present
@@ -10,12 +10,11 @@
 
   - name: Copy nginx file over
     debug:
-    msg: "Info Displayed!"
     copy:
       src: nginx.conf
       dest: /etc/nginx/nginx.conf
     register: nginx_config
-    
+
   - name: Restart nginx if needed
     service:
       name: nginx
