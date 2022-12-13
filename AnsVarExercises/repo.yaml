@@ -1,10 +1,10 @@
-hosts: all
-become: true
+- hosts: all
+  become: true
 
-tasks:
-- name: Clone repository
-  git:
-    repo: "{{ repo_link }}"
-    dest: home/ProgFolder/VarEx/
-    clone: yes
-    update: yes
+  tasks:
+  - name: Clone repository
+    git:
+      repo: "{{ repo_link }}"
+      dest: home/ProgFolder/VarEx/
+      clone: yes
+      update: yes
