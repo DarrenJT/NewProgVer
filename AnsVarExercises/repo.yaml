@@ -4,7 +4,7 @@ become: true
 tasks:
 - name: Clone repository
   git:
-    repo: {{ repo_link }}
+    repo: "{{ repo_link }}"
     dest: home/ProgFolder/VarEx/
     clone: yes
     update: yes
