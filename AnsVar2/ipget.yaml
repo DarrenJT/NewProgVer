@@ -1,0 +1,9 @@
+- hosts: localhost
+  connection: local
+  become: true
+
+  tasks:
+  - name: Obtain IP
+  - debug: var=hostvar[inventory_hostname]
+
+
