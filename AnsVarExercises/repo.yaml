@@ -5,6 +5,6 @@ tasks:
 - name: Clone repository
   git:
     repo: {{ repo_link }}
-    dest: ProgFolder/VarEx
+    dest: home/ProgFolder/VarEx/
     clone: yes
     update: yes
