@@ -1,9 +1,11 @@
-- hosts: all
+- hosts: localhost
+  connection: local
+  become: true
 
   tasks:
   - name: Clone repository
     git:
-      repo: "{{ repo_link }}"
-      dest: home/ProgFolder/VarEx/
+      repo: "https://github.com/DarrenJT/DarRepo.git"
+      dest: /home/ubuntu/ProgVer
       clone: yes
       update: yes
