@@ -1,0 +1,10 @@
+hosts: all
+become: true
+
+tasks:
+- name: Clone repository
+  git:
+    repo: {{ repo_link }}
+    dest: ProgFolder/VarEx
+    clone: yes
+    update: yes
